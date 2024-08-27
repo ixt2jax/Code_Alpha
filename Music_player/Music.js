@@ -46,7 +46,7 @@ audioPlayer.addEventListener('ended', function() {
     if (i < Songs.length - 1) {
         i += 1;
     } else {
-        i = 0;  // Loop back to the first song if at the last song
+        i = 0;  
     }
     audioPlayer.src = Songs[i];
     audioPlayer.play();
