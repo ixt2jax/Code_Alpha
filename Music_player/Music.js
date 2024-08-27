@@ -1,5 +1,5 @@
-const audioPlayer = document.getElementById('audioPlayer'); // Correctly reference the audio player
-const progressBar = document.getElementById('progressBar'); // Reference the progress bar
+const audioPlayer = document.getElementById('audioPlayer'); 
+const progressBar = document.getElementById('progressBar'); 
 
 
 document.getElementById('playBtn').addEventListener('click', function() {
