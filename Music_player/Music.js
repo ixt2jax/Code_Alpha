@@ -1,10 +1,12 @@
 const audioPlayer = document.getElementById('audioPlayer'); 
 const progressBar = document.getElementById('progressBar'); 
-
+const Songs = ["Brown-Rang.mp3", "Royalty.mp3"];  
+var i=0;
 
 document.getElementById('playBtn').addEventListener('click', function() {
+    document.getElementById('audioPlayer').src=Songs[i];
     document.getElementById('audioPlayer').play();
-    document.getElementById('SongTitle').textContent = 'Now Playing: Brown-Rang';
+    document.getElementById('SongTitle').textContent = 'Now Playing:'+Songs[i].split('.')[0];
 });
 let p=2;
 document.getElementById('pauseBtn').addEventListener('click', function() {
@@ -13,6 +15,7 @@ document.getElementById('pauseBtn').addEventListener('click', function() {
     if(p%2!=0){
         document.getElementById('pauseBtn').innerHTML= 'Pause';
         document.getElementById('audioPlayer').play();
+        document.getElementById('SongTitle').textContent = 'Now Playing:'+Songs[i].split('.')[0];
     }
     else if(p%2==0){
         document.getElementById('pauseBtn').innerHTML= 'Resume';
@@ -21,8 +24,7 @@ document.getElementById('pauseBtn').addEventListener('click', function() {
     }
     p+=1;  
 });
-const Songs = ["Brown-Rang.mp3", "Royalty.mp3"];  
-var i=0;
+
 document.getElementById('Next_Song').addEventListener('click', function() {
     
     if (i < Songs.length-1) {
